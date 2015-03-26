@@ -1,0 +1,830 @@
+/*
+Theme Name: Portfolio for Alex Mattingley
+Theme URI: http://wptreehouse.com/portfolio-project/
+Description: A custom WordPress portoflio site for Alex Mattingley built for the Treehouse tutorial series, "How to Build a WordPress Theme."
+Author: Zac Gordon and Alex Mattingley
+Version: 1.0
+Tags: clean, light, responsive, two-column, custom-post-types, custom-fields, portfolio
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/*
+
+ © Copyright 2013 Treehouse. All Rights Reserved.
+
+ */
+
+
+
+body {
+ 	color: #ababab;
+ 	font-family: 'GoudyRegular', serif; /* 1 */
+ 	}
+body.home.page.page-id-11.page-template-default.logged-in.admin-bar.customize-support {
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+@font-face {
+    font-family: 'GoudyItalic';
+    src: url('css/webfonts/oflgoudystm-italic-webfont.eot');
+    src: url('css/webfonts/oflgoudystm-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/oflgoudystm-italic-webfont.woff') format('woff'),
+         url('css/webfonts/oflgoudystm-italic-webfont.ttf') format('truetype'),
+         url('css/webfonts/oflgoudystm-italic-webfont.svg#ofl_sorts_mill_goudyitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'GoudyRegular';
+    src: url('css/webfonts/oflgoudystm-webfont.eot');
+    src: url('css/webfonts/oflgoudystm-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/oflgoudystm-webfont.woff') format('woff'),
+         url('css/webfonts/oflgoudystm-webfont.ttf') format('truetype'),
+         url('css/webfonts/oflgoudystm-webfont.svg#ofl_sorts_mill_goudyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'brandon_grotesque_bolditalic';
+    src: url('css/webfonts/brandon_bld_it-webfont.eot');
+    src: url('css/webfonts/brandon_bld_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/brandon_bld_it-webfont.woff') format('woff'),
+         url('css/webfonts/brandon_bld_it-webfont.ttf') format('truetype'),
+         url('css/webfonts/brandon_bld_it-webfont.svg#brandon_grotesque_bolditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesque_boldregular';
+    src: url('css/webfonts/brandon_bld-webfont.eot');
+    src: url('css/webfonts/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/brandon_bld-webfont.woff') format('woff'),
+         url('css/webfonts/brandon_bld-webfont.ttf') format('truetype'),
+         url('css/webfonts/brandon_bld-webfont.svg#brandon_grotesque_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesque_blackitalic';
+    src: url('css/webfonts/brandon_blk_it-webfont.eot');
+    src: url('css/webfonts/brandon_blk_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/brandon_blk_it-webfont.woff') format('woff'),
+         url('css/webfonts/brandon_blk_it-webfont.ttf') format('truetype'),
+         url('css/webfonts/brandon_blk_it-webfont.svg#brandon_grotesque_blackitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesque_blackRg';
+    src: url('css/webfonts/brandon_blk-webfont.eot');
+    src: url('css/webfonts/brandon_blk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/brandon_blk-webfont.woff') format('woff'),
+         url('css/webfonts/brandon_blk-webfont.ttf') format('truetype'),
+         url('css/webfonts/brandon_blk-webfont.svg#brandon_grotesque_blackRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesque_lightitalic';
+    src: url('css/webfonts/brandon_light_it-webfont.eot');
+    src: url('css/webfonts/brandon_light_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/brandon_light_it-webfont.woff') format('woff'),
+         url('css/webfonts/brandon_light_it-webfont.ttf') format('truetype'),
+         url('css/webfonts/brandon_light_it-webfont.svg#brandon_grotesque_lightitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesque_lightRg';
+    src: url('css/webfonts/brandon_light-webfont.eot');
+    src: url('css/webfonts/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/webfonts/brandon_light-webfont.woff') format('woff'),
+         url('css/webfonts/brandon_light-webfont.ttf') format('truetype'),
+         url('css/webfonts/brandon_light-webfont.svg#brandon_grotesque_lightRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1, h2 {
+ 	margin: 0;
+ 	}
+
+h1 {
+    font-family: 'brandon_grotesque_lightRg';
+ 	text-transform: uppercase;
+ 	text-align: center;
+ 	letter-spacing: -2px;
+ 	}
+h1 a {
+    color: #474747;
+}
+
+h2 {
+ 	color: #ccc;
+ 	font-family: 'GoudyItalic', serif; /* 1 */
+ 	font-weight: normal;
+ 	font-size: 1.25em;
+ 	line-height: 1em;
+ 	text-align: center;
+ 	}
+
+ h3 {
+ 	font-family: 'brandon_grotesque_lightRg';
+ 	text-transform: uppercase;
+ 	font-size: 3.5em;
+ 	line-height: 1.25em;
+ 	margin: 1% 0;
+ 	color: #000;
+ }
+
+
+.slides h3 {
+  font-size: 2.5em;
+ }
+
+.page-id-271 h3 {
+  font-size: 2.2em;
+}
+
+.page-id-271 h2 {
+  font-size: 1.1em;
+} 
+ h3#comments,
+ #respond h3,
+  h4 {
+ 	font-family: 'brandon_grotesque_lightRg';
+ 	text-transform: uppercase;
+ 	font-size: 2em;
+ 	line-height: 1.25em;
+ 	margin: 2% 0;
+ 	color: #000;
+ }
+
+ .page-id-271 h4 {
+  font-size: 1.3em;
+  color: #1E9F89;
+ }
+ h5 {
+ 	font-family: 'GoudyRegular', serif; /* 1 */
+    text-transform: uppercase;
+ 	font-size: .75em;
+ 	line-height: 1em;
+ 	color: #474747;
+ 	padding: 0 0 2% 0;
+ 	border-bottom: 1px solid #e6e6e6;
+ }
+ h6 {
+    color: #474747;
+    font-family: 'GoudyRegular', serif; /* 1 */
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 20px 0;
+    }
+ img {
+ 	max-width: 100%;
+ 	height: auto;
+ }
+p {
+	 font-size: 1.15em;
+ 	line-height: 1.75em;
+}
+ul li {
+    font-size: 1.15em;
+}
+a:hover {
+    color: inherit;
+}
+.btn {
+    font-family: 'GoudyItalic', serif; /* 1 */
+    font-size: 1em;
+    padding: 10px 25px;
+    margin: 2% 0;
+    display: inline-block;
+    color: #fff;
+}
+.btn a {
+    color: #fff;
+}
+.btn a:hover {
+    color: #fff;
+}
+.pink {
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+     border-radius: 5px;
+    background-color: #ee5356;
+}
+.blue {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+     border-radius: 5px;
+    background-color: #88e1d8;
+}
+.dropshadow {
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35);
+}
+.fade {
+   opacity: 0.5;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+      opacity: 1;
+      }
+
+hr {
+    border: none;
+    background-color: #e6e6e6;
+    color: #e6e6e6;
+    height: 1px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+	margin: 4% 0 0 0; 
+}
+
+header ul {
+  padding: 0px;
+}
+
+header ul li {
+  list-style: none;
+  text-align: center;
+}
+
+nav {
+	display: -webkit-box;
+	-webkit-box-orient:horizontal;
+ 	padding: 2% 0;
+ 	margin: 2% 0 2% 0;
+	}
+
+nav a {
+	font-family: 'GoudyRegular';
+	display:block;
+	-webkit-box-flex:1;
+	text-align:center;
+	font-size: 1.25;
+	color: #666;
+  padding: 10px;
+	}
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    padding-left: 0;
+    width: 100%;
+}
+nav li {
+    border: 1px solid #e6e6e6;
+    width: 100%;
+}
+nav ul li a {
+    text-align: center;
+
+}
+
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+.divider {
+	margin: 4% 0 2% 0;
+}
+
+.flexslider {
+  width: 100%;
+}
+/* Work ----------- */
+
+	#featured {
+        text-align: center;
+        padding: 2% 0 0 0;
+	}
+    #work {
+        text-align: center;
+    }
+    .slides .grid_8 {
+      margin-top: 6%;
+    }
+
+    #featured {
+      border-top: 1px solid #e6e6e6; 
+      border-bottom: 1px solid #e6e6e6;}
+    #featured img {
+        margin: 0; 
+        border: 20px solid #474747;
+        border-radius: 10px;
+        width: 90%;
+    }
+    
+    .page-id-11 .spotlight img {
+      border: 20px solid;
+      border-radius: 10px;
+      max-width: 90%;
+    }
+
+    #featured-info {
+        margin-top: 4%;
+      text-align: left;
+
+    }
+    #featured h3, #featured h5, #featured p {
+        color: #fff;
+    }
+
+    .spotlight {
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        text-align: left;
+        border: 1px solid #e6e6e6;
+        padding: 6% 4%;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    .page-id-11 .spotlight {
+      height: auto;
+    }
+    .spotlight.project:nth-child(even) {
+    	margin-right: 0;
+    }
+
+    .spotlight h4, .spotlight h5, .spotlight p {
+        color: #ddd;
+        text-align: left;
+    }
+
+
+/* Testimonial ----------- */
+
+
+    blockquote {
+        font-family: 'GoudyItalic';
+        font-size: 1.75em;
+        margin: 4% 0;
+        border-left: 10px solid #e3e3e3;
+        padding-left: 4%;
+        color: #474747;
+    }
+    cite {
+        font-family: 'GoudyRegular', serif; /* 1 */
+        font-style: normal;
+        text-transform: capitalize;
+        font-size: 1.25em;
+        line-height: 1em;
+        color: #474747;
+        margin: 0 0 6% 4%;
+     }
+
+/* Articles ----------- */
+
+article {
+	text-align: left;
+}
+ ul.info {
+	padding: 0;
+ 	font-size: 1em;
+ }
+ ul.info li {
+ 	list-style: none;
+ 	margin: 0 2% 0 0;
+	padding: 1% 0;
+ }
+
+ ul.info li, .excerpt, .post-link {
+ 	 	float: left;
+ }
+.excerpt {
+  max-width: 100%;
+}
+ ul.info a, .post-link {
+ 	  font-family: "GoudyItalic";
+ }
+  .post-link {
+ 	font-size: 1em;
+ }
+
+/* ==========================================================================
+   Social
+   ========================================================================== */
+
+.footer-left p {
+ 	  font-family: "GoudyItalic";
+ 	  font-size: 1em;
+ 	  line-height: 1.5em;
+ 	  margin: 0;
+}
+.footer-middle .row-instagram {
+    padding: 15px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+    margin-top: 2%;
+	padding: 2% 0;
+}
+
+#copyright {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 2%;
+    text-align: center;
+ 	font-family: "GoudyItalic";
+}
+#copyright p {
+	margin: 1% 0;
+}
+
+.ss-icon {
+	font-size: 1.25em ;
+}
+
+.ss-icon a {
+	color: #ccc;
+	margin-right: 2%;
+}
+.ss-icon a:hover {
+	color: #666;
+}
+
+/*******************************
+Contact Page
+********************************/
+
+.contact-page-image img {
+    border-radius: 15px;
+    width: 51%;
+}
+.contact-form {
+    text-align: center;
+    float: none;
+    margin: 2% auto;
+}
+.contact-page-image {
+    display: none;
+}
+input {
+    max-width: 100%;
+}
+
+/********************************
+Work Page
+********************************/
+.spotlight {
+  height: 700px;
+}
+.spotlight img {
+  border: 10px solid;
+  border-radius: 10px;
+  max-width: 90%;
+}
+.page-id-8 .grid_6.spotlight.project {
+  text-align: center;
+}
+
+
+/*******************************
+Individual Projects Page
+********************************/
+
+.project-images img {
+  margin: 25px auto;
+  border: 20px solid rgb(71, 71, 71);
+  border-radius: 10px;
+  max-width: 90%;
+}
+.project-images p {
+  text-align: center;
+}
+
+/*******************************
+Blog Page
+********************************/
+
+.single-post img {
+  max-width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+}
+
+.imagewp {
+  text-align: center;
+}
+.comment-author img {
+  width: 32px;
+}
+
+
+/*******************************
+Resume Page
+*****************************/
+
+/*General*/
+
+ul ul {
+  padding-left: 20px;
+}
+
+.page-id-271 .box ul {
+  padding-left: 30px;
+}
+.resume-container {
+  max-width: 1200px;
+}
+
+/*Header/Navigation*/
+
+.page-id-271 header {
+  width: 90%;
+  margin: 4% auto;
+}
+
+i.fa {
+  padding-right: 10px;
+}
+
+
+
+
+    /**********************
+    Left Side!
+    ************************/
+
+    .skills {
+      background: #D3D3D3;
+      color: #666;
+    }
+    .bio, .applied-skills {
+      background: #1E9F89;
+      color: #ddd;
+    }
+
+    .box {
+      max-width: 100%;
+      margin: 2% auto;
+      border-radius: 15px;
+      border: 1px solid #e6e6e6;
+      padding: 6% 4%;
+    }
+
+    .profile-picture {
+      background: url('images/tight_portrait.jpg') no-repeat;
+      background-size: cover;
+      background-position-y: -10px; 
+      width: 120px;
+      height: 120px;
+      display: block;
+      border-radius: 100%;
+      float: left;
+      margin: 0px 10px 10px 0px;
+    }
+
+    .left-side {
+      max-width: 90%;
+      margin: 0px auto;
+    }
+
+    /*http://www.paletton.com/#uid=5310u0kgjto6-NebrAXkNo-oTkg*/
+
+
+    /**********************
+    Right Side!
+    ************************/
+
+    .right-side {
+      width: 100%;
+    }
+
+    .projects-list, .work-experience, .education {
+      max-width: 90%;
+      margin: 0px auto;
+      padding: 5% 0%;
+    }
+
+    .individual-entry {
+      padding: 2%;
+    }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width : 875px) {
+
+    #featured {
+        padding: 4% 0;
+    }
+    #featured .grid_4, #featured .grid_8 {
+        width: 100%;
+    }
+    #featured .grid_8 {
+        margin: 0;
+    }
+    #featured-info {
+        margin: 0;
+    }
+    .grid_6 {
+        width: 100%;
+    }
+
+    #sidebar img {
+    margin: 0 auto;
+   }
+
+}
+
+
+/* Smaller ----------- */
+
+@media only screen and (max-width : 600px) {
+
+	nav {
+		margin: 10% 0;
+	}
+
+	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12{
+		width: 100%;
+		margin: 2% 0;
+	}
+	.push_1, .push_2, .push_3, .push_4, .push_5, .push_6, .push_7, .push_8, .push_9, .push_10, .push_11 {
+		margin: 0;
+	}
+	.popular {
+		display: none;
+	}
+  .excerpt {
+    max-width: 95%;
+  }
+  .clearfix h3 {
+    font-size: 38px;
+  }
+}
+
+
+
+/*================================
+Phone Width
+===================================*/
+
+@media screen and (min-width: 678px) {
+
+    nav li {
+        display: inline-block;
+        max-width: 18%;
+        border: none;
+        vertical-align: top;
+    }
+
+    nav a {
+        padding: 5px;
+        vertical-align: top;
+    }
+    nav {
+        border-bottom: 1px solid #e6e6e6;
+        border-top: 1px solid #e6e6e6;
+    }
+    
+    ul.header-contact {
+      text-align: center;
+    }
+
+    ul.header-contact li {
+      display: inline-block;
+      padding: 0px 5px;
+    }
+    
+}
+
+/*=================================
+768px
+===================================*/
+@media only screen and (min-width: 768px) {
+  .left-side {
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+  }
+  .resume-container {
+    width: 90%;
+    margin: 0px auto;  
+  }
+  .projects-list, .work-experience, .education {
+    max-width: 100%;
+  }
+  .projects-list {
+    padding-top: 0px;
+  }
+  .work-experience, .education {
+    padding: 2% 0%;
+  }
+  .bio.box {
+    margin-top: 0px;
+  }
+}
+
+/*=================================
+Fathead
+===================================*/
+
+@media only screen and (min-width: 875px) {
+
+    .fathead {
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 98%;
+    }
+}
+
+/*===================================
+Ipad width
+=====================================*/
+@media only screen and (min-width: 1010px) {
+    
+    .page-id-271 nav ul {
+      max-width: 1010px;
+    }
+
+    ul.header-contact li {
+      padding: 0px 15px;
+    }
+    .contact-page-image img {
+        margin-top: 14.8%;
+    }
+    .contact-form, .contact-page-image {
+    text-align: left;
+    display: block;
+    }
+    .contact-form {
+        float: left;
+    }
+
+}
+
+/*===================================
+Super width
+=====================================*/
+@media only screen and (min-width: 1200px) {
+  h3 {
+    font-size: 3.5em;
+  }
+}
+
+
+
+
+
+
+
