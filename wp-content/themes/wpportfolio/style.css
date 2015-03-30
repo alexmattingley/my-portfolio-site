@@ -598,6 +598,7 @@ i.fa {
 
 
 
+
     /**********************
     Left Side!
     ************************/
@@ -620,9 +621,9 @@ i.fa {
     }
 
     .profile-picture {
-      background: url('images/tight_portrait.jpg') no-repeat;
+      background: url('images/tight_portrait copy.jpg') no-repeat;
       background-size: cover;
-      background-position-y: -10px; 
+      background-position-y: -10px;
       width: 120px;
       height: 120px;
       display: block;

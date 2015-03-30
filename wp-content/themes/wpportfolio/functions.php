@@ -36,8 +36,6 @@ function theme_js() {
 	}
 	wp_enqueue_script('theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery'), '', true );
 	
-	// Might need to change class names for responsive nav, if you actually want to use this, and not just as an excercise
-	wp_enqueue_script('responsive_nav', get_template_directory_uri() . '/js/responsive_nav.js', array('jquery'), '', true );
 }
 
 add_action ('wp_enqueue_scripts', 'theme_js');

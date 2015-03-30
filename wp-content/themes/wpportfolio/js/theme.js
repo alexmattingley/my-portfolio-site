@@ -3,3 +3,5 @@ jQuery(document).ready(function($) {
 	$('.flexslider').flexslider();
 	$('.responsive_nav').responsive_nav();
 });
+
+

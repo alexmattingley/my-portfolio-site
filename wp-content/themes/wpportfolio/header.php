@@ -32,17 +32,27 @@
 						<h1><a href="<?php bloginfo('siteurl'); ?>"><?php bloginfo('name'); ?></a></h1>
 						<ul class="header-contact">
 							<li><a href="mailto:alexmattingley@gmail.com"><i class="fa fa-envelope"></i>alexmattingley@gmail.com</a></li>
-							<li><a href="tel:(443) 538-0556"><i class="fa fa-phone"></i>(443) 538-0556</a></li>
-							<li><a href="alexmattingley.com"><i class="fa fa-wifi"></i>alexmattingley.com</a></li>
+							<li><a href="tel:1-443-538-0556"><i class="fa fa-phone"></i>(443) 538-0556</a></li>
+							<li><a href="http://alexmattingley.com"><i class="fa fa-wifi"></i>alexmattingley.com</a></li>
 						</ul>
 					</hgroup>
 				</div>
 				<nav>
 				    <ul>
-						<li><a href="">Skills</a></li>
-				    	<li><a href="">Projects</a></li>
-				    	<li><a href="">Employment</a></li>
-				     	<li><a href="">Education</a></li>
+						
+						<?php
+
+							$args = array(
+								'menu' => 'resume-menu',
+								'echo' => false
+							);
+
+							echo strip_tags(wp_nav_menu( $args ), '<li><a>');
+
+					
+
+						 ?>
+						
 				    </ul>
 				</nav>
 			</header>
